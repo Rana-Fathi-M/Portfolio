@@ -8,7 +8,7 @@ import HRFlowKeyFeatures from "./HRFlowKeyFeatures/HRFlowKeyFeatures";
 export default function HeroSection() {
     const { t } = useTranslation();
     return (
-        <section className="bg-main-gradient-light pt-36 py-16 px-6 md:px-16">
+        <section className="bg-main-gradient-light pt-36 py-16 px-2 md:px-16">
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
                 {/* Left Content */}
                 <motion.div

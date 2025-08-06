@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import HeroSection from './HeroSection/HeroSection'
+import TestimonialSlider from './SliderSection/SliderSection'
+import HRFlow from './HRFlowSection/HRFlowSection'
+import RequestDemo from './RequestDemo/RequestDemo'
 
 
 export default function Home() {
@@ -12,6 +15,9 @@ export default function Home() {
     <div className="">
 
       <HeroSection />
+      <TestimonialSlider />
+      <HRFlow />
+      <RequestDemo />
       
 
     </div>

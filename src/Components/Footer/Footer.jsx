@@ -1,65 +1,68 @@
-// import { FaFacebookF, FaDribbble, FaPinterestP, FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import logo from '../../assets/SiyanaEN.svg';
-const Footer = () => {
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+
+export default function Footer() {
     return (
-        <footer className="bg-white border-t py-8 md:py-20 lg:py-28 px-5 sm:px-8 md:px-14 lg:px-24 xl:px-28 ">
-            <div className=" mx-auto grid grid-cols-2 md:grid-cols-6 gap-8">
-                {/* Logo + Description */}
-                <div className="col-span-2 space-y-4">
-                    <div className="flex items-center gap-2">
-                        <img src={logo} alt="standout logo" className='w-40' />
-                    </div>
-                    <p className="text-gray-500">
-                        Empowering teams to organize, collaborate, and achieve their goals effortlessly.
+        <footer className="bg-blackColor text-white py-12 px-6">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10 py-16">
+                {/* Logo & Intro */}
+                <div className=" col-span-1 md:col-span-2">
+                    <h2 className="text-2xl font-bold mb-10">Salis Employee</h2>
+                    <p className="text-base text-gray-300 mb-10">
+                        HrFlow stands at the forefront of revolutionizing the recruitment landscape, providing cutting-edge solutions to approach talent acquisition.
+
                     </p>
+                    <div className="flex gap-10 mt-6">
+                        <FaFacebookF className="hover:text-[#ff6984] cursor-pointer transition" />
+                        <FaTwitter className="hover:text-[#ff6984] cursor-pointer transition" />
+                        <FaLinkedinIn className="hover:text-[#ff6984] cursor-pointer transition" />
+                        <FaInstagram className="hover:text-[#ff6984] cursor-pointer transition" />
+                    </div>
                 </div>
 
-                {/* Links */}
-                <div className="flex flex-col space-y-2 md:mt-20 ">
-                    <h4 className="font-semibold text-xl md:text-2xl text-gray-700">Company</h4>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">About Us</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Blog Details</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Blog</Link>
+                {/* Quick Links */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-10">Company</h3>
+                    <ul className="space-y-5 text-white ">
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">About Us</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Careers</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Blog</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Contact</li>
+                    </ul>
                 </div>
 
-                <div className="flex flex-col space-y-2 md:mt-20">
-                    <h4 className="font-semibold text-xl md:text-2xl text-gray-700">Support</h4>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Features</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Contact</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">License</Link>
+                {/* Resources */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-10">Resources</h3>
+                    <ul className="space-y-5 text-white ">
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Help Center</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Privacy Policy</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Terms of Service</li>
+                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Support</li>
+                    </ul>
                 </div>
 
-                <div className="flex flex-col space-y-2 md:mt-20">
-                    <h4 className="font-semibold text-xl md:text-2xl text-gray-700">Resources</h4>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Pricing</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Career</Link>
-                    <Link to={""} className="text-gray-500 text-lg md:text-xl hover:text-black">Terms & Policy</Link>
-
-
-                </div>
-                {/* App Download Buttons */}
-                <div className=" space-y-3 flex flex-col md:items-end md:mt-20">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                        alt="Google Play"
-                        className="w-32"
-                    />
-                    <img
-                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                        alt="App Store"
-                        className="w-32"
-                    />
+                {/* Subscribe */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-10">Subscribe</h3>
+                    <p className="text-sm text-gray-300 mb-4">
+                        Stay updated with HR insights and news.
+                    </p>
+                    <div className="flex items-center">
+                        <input
+                            type="email"
+                            placeholder="Your email"
+                            className="w-full px-4 py-2 rounded-l-full text-black focus:outline-none"
+                        />
+                        <button className="bg-[#ff6984] px-4 py-2 rounded-r-full text-white font-semibold hover:bg-pink-600 transition">
+                            Join
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            {/* Bottom Text */}
-            <div className="text-center text-sm text-gray-500 mt-12 border-t pt-6">
-                Copyright © 2024 SalisSiyana. All Rights Reserved.
+            <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-subTitleLightText">
+                &copy; {new Date().getFullYear()} Salis Employee All rights reserved | Powered by <a href="" className="text-[#ff6984] hover:text-pink-600 transition">Salis Digital</a>
             </div>
         </footer>
     );
-};
-
-export default Footer;
-
+}
