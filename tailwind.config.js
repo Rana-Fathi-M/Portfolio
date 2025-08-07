@@ -52,8 +52,7 @@ export default {
       },
       backgroundImage: {
         'main-gradient-light': 'linear-gradient(157deg, #ffbd17, #ffd0be 5%, #c1c0f9 47%, #ffb7b7);',
-        'main-gradient-light-two': 'linear-gradient(#fff, #d3edff 20%, #b5dfffb3)',
-        'main-gradient-cloud': 'linear-gradient(#fff, #adddff 20%, #64bcff)',
+        'main-gradient-light-two': 'linear-gradient(105deg, #6c47ff66, #6727cf66 80%, #f6584166), linear-gradient(#000, #000)',
       },
     },
   },
