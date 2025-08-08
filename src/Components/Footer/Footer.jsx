@@ -1,4 +1,6 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
     return (
@@ -26,7 +28,12 @@ export default function Footer() {
                         <li className="hover:text-PinkBg duration-150 cursor-pointer">About Us</li>
                         <li className="hover:text-PinkBg duration-150 cursor-pointer">Careers</li>
                         <li className="hover:text-PinkBg duration-150 cursor-pointer">Blog</li>
-                        <li className="hover:text-PinkBg duration-150 cursor-pointer">Contact</li>
+                        <li>
+  <Link to="/contactus" className="hover:text-PinkBg duration-150">
+    Contact
+  </Link>
+</li>
+
                     </ul>
                 </div>
 

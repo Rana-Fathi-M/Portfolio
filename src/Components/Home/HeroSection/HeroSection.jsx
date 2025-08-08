@@ -8,7 +8,7 @@ import HRFlowKeyFeatures from "./HRFlowKeyFeatures/HRFlowKeyFeatures";
 export default function HeroSection() {
     const { t } = useTranslation();
     return (
-        <section className="bg-main-gradient-light pt-36 py-16 px-2 md:px-16">
+        <section className="bg-main-gradient-light pt-36 py-16 px-2 md:px-16" id="home">
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
                 {/* Left Content */}
                 <motion.div
@@ -17,11 +17,16 @@ export default function HeroSection() {
                     transition={{ duration: 0.6 }}
                     className="flex-1"
                 >
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-[#263c61] mb-4 leading-[100px]">
-                        Simplifying HR Management for Every Business
-                    </h1>
+                  <h1 className="text-4xl md:text-5xl font-extrabold text-[#263c61] mb-6 leading-tight">
+  <span className="block">Empower Your Workforce</span>
+  <span className="block">with Salis Digital HR Suite</span>
+  <span className="block text-lg md:text-xl font-semibold mt-4">
+    Modern HR & Payroll. Mobile-First. GCC-Compliant.
+  </span>
+</h1>
+
                     <p className="text-lg text-[#717185] mb-6">
-                        {t("Introducing HrFlow, the unsung hero of streamlined communication in the world of Software as a Service.")}
+                        {t("Odoo Enterprise + Salis ESS App — the complete HR and Payroll solution tailored for growing businesses in Saudi Arabia and the GCC.")}
                     </p>
 
                     {/* Animated Button with Sliding Arrow to the Left */}
@@ -29,7 +34,7 @@ export default function HeroSection() {
                         to=""
                         className="group bg-rose-500 hover:bg-rose-600 text-white text-lg px-6 py-3 rounded-full transition-all duration-300 inline-flex items-center"
                     >
-                        {t("Request Demo")}
+                        {t("Get started now")}
                         <span className="pl-3 inline-block transform transition-transform duration-300 group-hover:translate-x-2">
                             <FaArrowRight />
                         </span>

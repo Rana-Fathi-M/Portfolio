@@ -18,23 +18,23 @@ export default function Navbar() {
   const navLinks = (
     <>
       <Link
-        to="/features"
+        to="/#home"
         className={`transition-colors duration-300 text-black`}
       >
-        Features
+        Home
       </Link>
       <Link
-        to="/howItWorks"
+        to="/#howItWorks"
         className={`transition-colors duration-300 text-black`}
       >
         How It Works
       </Link>
-      <Link
+      {/* <Link
         to="/stories"
         className={`transition-colors duration-300 text-black`}
       >
         Stories
-      </Link>
+      </Link> */}
       <Link
         to="/pricing"
         className={`transition-colors duration-300 text-black`}
@@ -42,16 +42,16 @@ export default function Navbar() {
         Pricing
       </Link>
       <Link
-        to="/testimonials"
+        to="/#features"
         className={`transition-colors duration-300 text-black`}
       >
-        Testimonials
+        Features
       </Link>
       <Link
-        to="/blog"
+        to="/contactus"
         className={`transition-colors duration-300 text-black`}
       >
-        Blog
+        Contact Us
       </Link>
     </>
   );

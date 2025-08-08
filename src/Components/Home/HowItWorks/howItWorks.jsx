@@ -29,7 +29,7 @@ export default function HowItWorksSection() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto bg-white py-20 px-4 mt-16 container overflow-hidden">
+    <div className="max-w-7xl mx-auto bg-white py-20 px-4 mt-16 container overflow-hidden" id="howItWorks">
       {/* Header */}
       <div className="text-center mb-16">
         <h1 className={`text-4xl md:text-5xl font-bold text-mainDarkBlue transition-all duration-700 ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>

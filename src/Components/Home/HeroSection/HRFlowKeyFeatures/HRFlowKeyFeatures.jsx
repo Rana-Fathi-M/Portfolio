@@ -1,55 +1,65 @@
-import image1 from "../../../../assets/imgs/dashboard 1.png";
-import image2 from "../../../../assets/imgs/dashboard 2.png";
-import image3 from "../../../../assets/imgs/dashboard 3.png";
-import image4 from "../../../../assets/imgs/dashboard 4.png";
+import image1 from "../../../../assets/imgs/smart.jpg";
+import image2 from "../../../../assets/imgs/dailyy.jpg";
+import image3 from "../../../../assets/imgs/digital.jpg";
+import image4 from "../../../../assets/imgs/selfService.jpg";
 
 export default function HRFlowKeyFeatures() {
     const features = [
         {
             image: image1,
-            title: "Streamlined HR Processes",
+            title: "Smart & Secure Attendance Tracking",
+            description:"Let employees clock in securely, whether on-site or remote.",
             points: [
-                "Centralized employee database",
-                "Automated onboarding and offboarding processes",
-                "Customizable workflows and approvals",
+                "Facial Recognition: Fast, secure login via device camera",
+                "GPS Check-in/Out: Geotagged time logs with map view",
+                "QR Code Check-ins: Unique QR for contactless attendance",
+                "Kiosk Mode: Team leaders can log attendance for entire shifts",
+                "Biometric Integration Ready: Works with external hardware"
+
             ],
         },
         {
             image: image2,
-            title: "Employee Self-Service",
+            title: "Daily Scheduling & Location Awareness",
+            description:"Keep distributed teams aligned and on time.",
             points: [
-                "Portal for employees to manage their data",
-                "Time-off requests and approvals",
-                "Performance reviews and feedback",
+                "Personalized shift schedules available on mobile",
+                "Real-time duty location visibility",
+                "Push notifications for schedule updates",
+                "Integrated with Odoo Attendance, Projects, and Subscriptions"
             ],
         },
         {
             image: image3,
-            title: "Data-Driven Decisions",
+            title: "Digital Access to HR Records",
+            description:"Give employees full access to what matters — securely.",
             points: [
-                "Advanced analytics and dashboards",
-                "Track key HR metrics easily",
-                "Exportable reports for management",
+                "Login to view personal employee profile",
+                "Access and download payslips, contracts, and ID documents",
+                "View historical records, including warnings and reviews",
+                "Bilingual interface in Arabic & English"
             ],
         },
         {
             image: image4,
-            title: "Compliance and Security",
+            title: "Self-Service HR Requests",
+            description:"Streamline employee interactions — no more emails or paper forms",
             points: [
-                "Secure employee records",
-                "GDPR and labor law compliance",
-                "Role-based access control",
+                "Leave Requests: Vacation, sick leave, permissions",
+                "Expense Claims: Upload receipts, tag projects or departments",
+                "Certificates / Complaints / Letters: Instant digital submission",
+                "Auto-synced with Odoo Approvals, Payroll, and Accounting"
             ],
         },
     ];
 
     return (
-        <section className="py-16 ">
+        <section className="py-16 " >
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12 max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#263c61] mb-4">
-                        HRFlow Key Features
+                        Core ESS Features — Tailored for Mobile Teams
                     </h2>
                     <p className="text-[#717185] text-base leading-relaxed">
                         HRMLand is your all-in-one HR management solution. Our user-friendly interface and modules allow you to tailor the software to fit your specific HR needs.
@@ -78,6 +88,7 @@ export default function HRFlowKeyFeatures() {
                                     {feature.title}
                                     <span className="block w-10 h-[3px] bg-indigo-400 mt-1 rounded-md"></span>
                                 </h3>
+                                 <p className="text-[#717185] text-base mb-4">{feature.description}</p>
                                 <ul className="space-y-4 text-[#717185] text-base leading-relaxed">
                                     {feature.points.map((point, idx) => (
                                         <li key={idx} className="flex items-start gap-2">

@@ -23,11 +23,11 @@ const Pricing = () => {
     };
   }, []);
 
-  const prices = isYearly ? ["$12", "$24", "$60"] : ["$15", "$29", "$69"];
+  const prices = isYearly ? ["$15", "$24", "$69"] : ["$4.00", "$3.20", "$custom"];
   const bottomText = [
-    "Ideal for small businesses and startups looking for essential HR management tools.",
-    "Ideal for growing teams needing advanced workflow and analytics.",
-    "Perfect for large enterprises needing fully customizable solutions.",
+    "Ideal for small businesses and startups looking for essential HR management tools for Startups / Small Teams.",
+    "Ideal for growing teams needing advanced workflow ,analytics ,and growing Teams(51–1000 employees).",
+    "Perfect for large enterprises needing fully customizable solutions and 1000+ Employees or Complex Needs.",
   ];
 
   return (
@@ -64,16 +64,14 @@ const Pricing = () => {
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          TNC Pricing Plan
+          Subscription Packages
         </h1>
         <p
           className={`text-sm sm:text-base md:text-lg text-subTitleLightText max-w-3xl mx-auto transition-all duration-700 delay-200 ${
             show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Unlock the power of seamless recruitment with HrFlow, where innovation
-          meets efficiency. Our pricing plans are designed to cater to the
-          diverse needs.
+         Scalable. Transparent. No Hidden Fees.
         </p>
       </div>
 
@@ -118,7 +116,7 @@ const Pricing = () => {
           </span>
           <RiArrowGoForwardFill className="text-[#f37576]" />
           <span className="text-[#f37576] text-xs font-semibold bg-[#ffe7e7] px-3 py-1 rounded-full">
-            Save 30%
+            Save 20%
           </span>
         </div>
       </div>
@@ -131,62 +129,108 @@ const Pricing = () => {
       >
         {[
           {
-            title: "Essentials",
-            features: [
-              "Centralized employee database",
-              "Employee self-service portal",
-              "Basic offboarding workflows",
-              "Standard reports and analytics",
-              "Compliance and security features",
-            ],
+            title: "Basic",
+           features: [
+  { label: "Smart Attendance (Face, GPS, QR)", available: true },
+  { label: "Kiosk Mode (Supervisor Clock-In)", available: true },
+  { label: "Daily Shift & Location Tracking", available: true },
+  { label: "Leave & Time-Off Requests", available: true },
+  { label: "Payslip & Document Access", available: true },
+  { label: "Expense Claims & Requests", available: true },
+  { label: "Letters & HR Submissions", available: true },
+  { label: "Arabic / English Interface", available: true },
+  { label: "Mobile App (Android & iOS)", available: true },
+  { label: "Odoo Integration (No license required)", available: true },
+  { label: "API Access", available: false },
+  { label: "White Label Branding", available: false },
+  { label: "SLA-Based Support & Hosting", available: false },
+  { label: "ERP Integration", available: false },
+]
+,
             price: prices[0],
           },
           {
-            title: "Advanced HR Management",
+            title: "Growth",
             features: [
-              "Advanced offboarding workflows",
-              "Customizable workflows and approvals",
-              "Enhanced analytics and reporting",
-              "Employee performance reviews",
-              "Priority customer support",
-            ],
+  { label: "Smart Attendance (Face, GPS, QR)", available: true },
+  { label: "Kiosk Mode (Supervisor Clock-In)", available: true },
+  { label: "Daily Shift & Location Tracking", available: true },
+  { label: "Leave & Time-Off Requests", available: true },
+  { label: "Payslip & Document Access", available: true },
+  { label: "Expense Claims & Requests", available: true },
+  { label: "Letters & HR Submissions", available: true },
+  { label: "Arabic / English Interface", available: true },
+  { label: "Mobile App (Android & iOS)", available: true },
+  { label: "Odoo Integration (No license required)", available: true },
+  { label: "API Access", available: true },
+  { label: "White Label Branding", available: false },
+  { label: "SLA-Based Support & Hosting", available: false },
+  { label: "ERP Integration", available: false },
+]
+,
             price: prices[1],
           },
           {
-            title: "Enterprise Solutions",
-            features: [
-              "Tailored solutions for enterprise-level",
-              "Dedicated account manager",
-              "API access for integration",
-              "Advanced customization options",
-              "Training & onboarding assistance",
-            ],
+            title: "Enterprise",
+          features: [
+  { label: "Smart Attendance (Face, GPS, QR)", available: true },
+  { label: "Kiosk Mode (Supervisor Clock-In)", available: true },
+  { label: "Daily Shift & Location Tracking", available: true },
+  { label: "Leave & Time-Off Requests", available: true },
+  { label: "Payslip & Document Access", available: true },
+  { label: "Expense Claims & Requests", available: true },
+  { label: "Letters & HR Submissions", available: true },
+  { label: "Arabic / English Interface", available: true },
+  { label: "Mobile App (Android & iOS)", available: true },
+  { label: "Odoo Integration (No license required)", available: true },
+  { label: "API Access", available: true },
+  { label: "White Label Branding", available: true },
+  { label: "SLA-Based Support & Hosting", available: true },
+  { label: "ERP Integration", available: true},
+]
+,
             price: prices[2],
           },
         ].map((plan, index) => (
           <div
             key={index}
-            className="group transition-all duration-300 rounded-2xl bg-transparent"
+            className="group flex flex-col h-full transition-all duration-300 rounded-2xl bg-transparent"
           >
-            <div className="rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col items-start group-hover:bg-[#263c61] group-hover:shadow-2xl transition-all duration-300">
+            <div className="rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col items-start flex-grow group-hover:bg-[#263c61] group-hover:shadow-2xl transition-all duration-300">
               <h3 className="text-base sm:text-lg font-semibold text-mainDarkBlue group-hover:text-white">
                 {plan.title}
               </h3>
               <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-PinkBg my-6 sm:my-8">
                 {plan.price}
+                
               </div>
               <ul className="text-left space-y-3 sm:space-y-4 mb-6 text-sm sm:text-base">
-                {plan.features.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center group-hover:text-[#fffc] font-medium text-subTitleLightText"
-                  >
-                    <IoCheckmarkDone className="text-subTitleLightText text-xl group-hover:text-[#fffc]" />
-                    <span className="ml-2">{item}</span>
-                  </li>
-                ))}
+               {plan.features.map((feature, i) => {
+  const isObject = typeof feature === 'object';
+  const label = isObject ? feature.label : feature;
+  const available = isObject ? feature.available : true;
+
+  return (
+    <li
+      key={i}
+      className={`flex items-center font-medium ${
+        available
+          ? "text-subTitleLightText group-hover:text-[#fffc]"
+          : "text-gray-400 line-through"
+      }`}
+    >
+      {available ? (
+        <IoCheckmarkDone className="text-subTitleLightText text-xl group-hover:text-[#fffc]" />
+      ) : (
+        <span className="text-red-400 text-xl">❌</span>
+      )}
+      <span className="ml-2">{label}</span>
+    </li>
+  );
+})}
+
               </ul>
-              <button className="bg-blackColor text-white py-2 px-5 sm:px-6 rounded-2xl group-hover:bg-PinkBg self-start transition-all duration-300 text-sm sm:text-base">
+              <button className="bg-blackColor text-white py-2 px-5 sm:px-6 rounded-2xl group-hover:bg-PinkBg self-start mt-auto transition-all duration-300 text-sm sm:text-base">
                 Get Started
               </button>
             </div>
