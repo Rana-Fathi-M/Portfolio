@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Components/Layout/layout";
+import Layout from "./Components/LayOut/layout";
 // import { NotFound } from "./Components/NotFound/NotFound";
 import Home from "./Components/Home/Home";
-import ContactUs from "./Components/ContactUs/ContactUs";
-import Pricing from "./Components/Pricing/Pricing";
-
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import Me from "./Components/Me/Me";
+import Works from "./Components/Works/Works";
 
 
 const routing = createBrowserRouter([
@@ -12,9 +13,8 @@ const routing = createBrowserRouter([
     path: "", element: <Layout />, children: [
       { index: true, element: <Home /> },
       { path: "home", element: <Home /> },
-      { path: "contactus", element: <ContactUs /> },
-      { path: "pricing", element: <Pricing /> },
-
+      { path: "me", element: <Me /> },
+      { path: "work", element: <Works /> },
 
       // { path: '*', element: <NotFound /> }
     ],
@@ -23,6 +23,15 @@ const routing = createBrowserRouter([
 
 
 function App() {
+
+   const {i18n} = useTranslation();
+    useEffect(() => {
+    if (i18n.language === "ar") {
+      document.body.classList.add("font-zain");
+    } else {
+      document.body.classList.remove("font-zain");
+    }
+  }, [i18n.language]);
 
   return (
     <RouterProvider router={routing} />

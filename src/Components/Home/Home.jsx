@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import HeroSection from './HeroSection/HeroSection'
-import TestimonialSlider from './SliderSection/SliderSection'
-import HRFlow from './HRFlowSection/HRFlowSection'
-import RequestDemo from './RequestDemo/RequestDemo'
-import HowItWorksSection from './HowItWorks/howItWorks'
-import Stories from './Stories/stories'
-import Pricing from './Pricing/pricing'
 
 import { useLocation } from "react-router-dom";
+import MyWorks from './MyWorks/MyWorks';
+import Info from './Info/Info';
+import CTA from './CTA/CTA.JSX';
+import Thoughts from './MyThoughts/MyThoughts';
+
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -34,16 +33,14 @@ export default function Home() {
 
   return (
     <div className="">
-       
+
       <ScrollToHash />
 
       <HeroSection />
-      <HowItWorksSection />
-      <Stories />
-      <Pricing />
-      <TestimonialSlider />
-      <HRFlow />
-      <RequestDemo />
+      <MyWorks/>
+      <Info/>
+      <Thoughts/>
+      <CTA/>
 
 
     </div>

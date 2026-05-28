@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,10 +16,19 @@
     --mainGradientLightBg: linear-gradient(#b5dfff 30% , #d3edff 70%, #fff );
     --mainGradientLightBgTwo: linear-gradient(#fff, #d3edff 60%, #b5dfffb3 );
 }
+.backface-hidden {
+  backface-visibility: hidden;
+}
 
 
-body {
-  @apply font-sans;
+
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .main-light-bg {
@@ -86,15 +95,6 @@ body {
   --font-family-heading: 'Nunito Sans', sans-serif;
 }
 
-/*  Fonts  */
-.inter-font {
-  font-family: var(--font-family-body);
-}
-
-.nunito-font {
-  font-family: var(--font-family-heading);
-}
-
 
 
 /* / Color Classes /  */
@@ -147,5 +147,3 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
-
-
