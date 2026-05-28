@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import Me from "./Components/Me/Me";
 import Works from "./Components/Works/Works";
+import NotFound from "./Components/NotFound/NotFound";
+import LetsTalk from "./Components/LetsTalk/LetsTalk";
 
 
 const routing = createBrowserRouter([
@@ -15,8 +17,8 @@ const routing = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "me", element: <Me /> },
       { path: "work", element: <Works /> },
-
-      // { path: '*', element: <NotFound /> }
+      { path: "contact", element: <LetsTalk /> },
+      { path: '*', element: <NotFound /> }
     ],
   },
 ]);

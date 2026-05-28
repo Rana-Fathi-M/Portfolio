@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
+import rana from "../../../assets/imgs/rana.jpeg"
 export default function HeroSection() {
   const containerRef = useRef(null);
   const piecesRef = useRef([]);
@@ -15,7 +15,7 @@ export default function HeroSection() {
   const totalPieces = rows * cols;
   
   // Placeholder image URL
-  const placeholderImg = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop";
+  const placeholderImg = rana;
 
   useEffect(() => {
     // --- 1. INITIAL REVEAL ANIMATION ---

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // or next/link if using Next.js
 import { motion } from "framer-motion";
-import { ChevronDown, ShoppingBag } from "lucide-react";
+import rana from "../../assets/imgs/rana.jpeg"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
         {/* Left: Profile Picture */}
         <Link to="/" className="flex-shrink-0 rounded-full overflow-hidden w-10 h-10 border border-white/20 hover:scale-105 transition-transform">
           <img 
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" 
+            src={rana}
             alt="Rana - Profile" 
             className="w-full h-full object-cover"
           />

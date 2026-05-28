@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // or next/link
 import { Youtube, Linkedin, Twitter, Facebook, Github, Mail } from "lucide-react";
+import rana from "../../assets/imgs/rana.jpeg"
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="flex flex-col max-w-xs">
           <div className="w-12 h-12 rounded-full overflow-hidden mb-6 border border-white/20">
             <img 
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" 
+              src={rana}
               alt="Rana" 
               className="w-full h-full object-cover"
             />
