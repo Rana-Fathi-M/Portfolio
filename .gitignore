@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+.cache/
+
+# production
+dist/
+build/
+
+# misc
+.env
+.DS_Store
+*.exe
