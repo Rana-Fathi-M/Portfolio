@@ -12,15 +12,19 @@ import LetsTalk from "./Components/LetsTalk/LetsTalk";
 
 const routing = createBrowserRouter([
   {
-    path: "", element: <Layout />, children: [
+    path: "/", element: <Layout />, children: [
       { index: true, element: <Home /> },
       { path: "home", element: <Home /> },
+      { path: "Portfolio", element: <Home /> },
       { path: "me", element: <Me /> },
       { path: "work", element: <Works /> },
       { path: "contact", element: <LetsTalk /> },
       { path: '*', element: <NotFound /> }
     ],
   },
+  , {
+  basename: "/Portfolio", // <-- This is the magic line that fixes GitHub Pages!
+}
 ]);
 
 
