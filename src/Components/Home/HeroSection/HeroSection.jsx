@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import rana from "../../../assets/imgs/rana.jpeg"
+import rana from "../../../assets/imgs/rana.jpeg" 
 export default function HeroSection() {
   const containerRef = useRef(null);
   const piecesRef = useRef([]);
