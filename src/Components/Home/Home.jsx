@@ -4,8 +4,8 @@ import HeroSection from './HeroSection/HeroSection'
 import { useLocation } from "react-router-dom";
 import MyWorks from './MyWorks/MyWorks';
 import Info from './Info/Info';
-import CTA from './CTA/CTA.JSX';
 import Thoughts from './MyThoughts/MyThoughts';
+import CTA from './CTA/CTA';
 
 
 function ScrollToHash() {
